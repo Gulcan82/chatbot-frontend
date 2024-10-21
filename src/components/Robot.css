@@ -1,10 +1,10 @@
 /* Robot.css */
 .robot {
-    width: 150px;
+    width: 400px;
     height: 200px;
-    background: linear-gradient(135deg, #222, #555);
-    border-radius: 20px;
-    margin: 20px auto;
+    background-color: rgb(13, 16, 6);
+    border-radius: 50px;
+    margin: 50px auto;
     position: relative;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: radial-gradient(circle, #00f, #008);
+    background: radial-gradient(circle, rgb(105, 105, 155), rgb(226, 226, 228));
     position: absolute;
     left: 50%;
     top: 30%;
