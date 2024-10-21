@@ -1,16 +1,15 @@
 import axios from 'axios';
 
-// Service function to handle API requests to your backend
-const sendMessageToBackend = async (input) => {
-  try {
-    const response = await axios.post('http://localhost:5000/api/chat', {
-      message: input,
-    });
-    return response.data; // Return the bot's response
-  } catch (error) {
-    console.error('Error communicating with the backend:', error);
-    throw error; // Re-throw the error for handling in the component
-  }
-};
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api/chat';
 
-export default sendMessageToBackend;
+export const chatService = {
+  sendMessage: async (message) => {
+    try {
+      const response = await axios.post(API_URL, { message });
+      return response.data;
+    } catch (error) {
+      console.error('Error in chatService:', error);
+      throw error;
+    }
+  },
+};
