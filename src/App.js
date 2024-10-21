@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Chatbot from './components/chatbot.js';
+import Robot from './components/Robot'; // Ensure the path is correct and matches your project structure
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
       </header>
       <div className="Chatbot-container">
         <Chatbot />
+        <Robot /> {/* Using the Robot component here */}
         <div className="Chatbot-actions">
-          <button className="Chatbot-action">Schnelle Antwort 1</button>
-          <button className="Chatbot-action">Schnelle Antwort 2</button>
+          <button className="App-button Chatbot-action">Schnelle Antwort 1</button>
+          <button className="App-button Chatbot-action">Schnelle Antwort 2</button>
         </div>
       </div>
     </div>
