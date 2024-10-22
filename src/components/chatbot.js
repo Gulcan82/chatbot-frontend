@@ -1,48 +1,33 @@
+// src/components/chatbot.js
+
 import React, { useState } from 'react';
-import { chatService } from '../services/chatService';
 
-export default function Chatbot() {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
+function Chatbot() {
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleInputChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSendMessage = (e) => {
     e.preventDefault();
-    if (!input.trim()) return;
-
-    const userMessage = { text: input, sender: 'user' };
-    setMessages(prevMessages => [...prevMessages, userMessage]);
-    setInput('');
-
-    try {
-      const response = await chatService.sendMessage(input);
-      const botMessage = { text: response, sender: 'bot' };
-      setMessages(prevMessages => [...prevMessages, botMessage]);
-    } catch (error) {
-      console.error('Error sending message:', error);
-      const errorMessage = { text: 'Sorry, there was an error processing your request.', sender: 'bot' };
-      setMessages(prevMessages => [...prevMessages, errorMessage]);
-    }
+    console.log('Message sent: ', message);
+    setMessage(''); // Leert das Eingabefeld nach dem Senden
   };
 
   return (
-    <div className="chatbot-container">
-      <div className="chat-messages">
-        {messages.map((message, index) => (
-          <div key={index} className={`message ${message.sender}`}>
-            {message.text}
-          </div>
-        ))}
-      </div>
-      <form onSubmit={handleSubmit} className="chat-input-form">
+    <div>
+      <form onSubmit={handleSendMessage}>
         <input
           type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
           placeholder="Type your message..."
-          className="chat-input"
+          value={message}
+          onChange={handleInputChange}
         />
-        <button type="submit" className="chat-submit">Send</button>
+        <input type="submit" value="Send" />
       </form>
     </div>
   );
 }
+
+export default Chatbot;

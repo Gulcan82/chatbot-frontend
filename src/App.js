@@ -1,7 +1,9 @@
+// src/App.js
+
 import React from 'react';
 import './App.css';
-import Chatbot from './components/chatbot.js';
-import Robot from './components/Robot'; // Ensure the path is correct and matches your project structure
+import Chatbot from './components/chatbot'; 
+import Robot from './components/Robot'; // Wir binden die Robot-Komponente ein
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
       </header>
       <div className="Chatbot-container">
         <Chatbot />
-        <Robot /> {/* Using the Robot component here */}
+        <Robot /> {/* Hier wird die Robot-Komponente verwendet */}
         <div className="Chatbot-actions">
           <button className="App-button Chatbot-action">Schnelle Antwort 1</button>
           <button className="App-button Chatbot-action">Schnelle Antwort 2</button>
