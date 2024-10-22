@@ -84,7 +84,11 @@ input[type="text"]::placeholder {
   color: #888;
 }
 
-
+.chatbot-animation {
+  display: block;
+  margin: 20px auto;
+  width: 150px; /* Passe die Bildgröße an */
+}
 
 
 
