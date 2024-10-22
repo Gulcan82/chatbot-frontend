@@ -1,21 +1,25 @@
-/* src/components/Robot.css */
-
-.robot {
-  width: 150px;
-  height: 150px;
-  background-color: #333;
-  border-radius: 50%;
-  position: relative;
-  margin: 20px auto;
+.Robot {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.robot-video {
+  width: 100%; /* Passt sich der Breite des Containers an */
+  max-width: 300px; /* Reduziert die maximale Breite des Videos */
+  height: auto; /* Höhe bleibt proportional zur Breite */
+  border-radius: 10px; /* Abgerundete Ecken */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
 }
 
 .robot-eyes {
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
 }

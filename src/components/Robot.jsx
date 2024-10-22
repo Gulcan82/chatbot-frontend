@@ -1,12 +1,19 @@
-// src/components/Robot.jsx
-
 import React from 'react';
-import './Robot.css'; // Assuming you move the CSS specific to Robot into Robot.css
+import './Robot.css'; // Ensure you have this file for the styles
 
 const Robot = () => {
   return (
-    <div className="robot">
-      <div className="robot-eyes"></div>
+    <div className="Robot">
+    {/* Video player replacing the image */}
+    <video 
+      src={`${process.env.PUBLIC_URL}/Abschluss-projekt .mp4`} // Replace with your actual video file path
+      autoPlay 
+      loop 
+      muted
+      className="robot-video" // Add a class for styling purposes
+    />
+    <div className="robot-eyes"></div>
+      <p>WIlkommen An Unsere Abschluss Projekt  </p>
     </div>
   );
 };

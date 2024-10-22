@@ -1,6 +1,6 @@
-/* src/App.css */
+/* App.css */
 body {
-  background: linear-gradient(135deg, #f9fafb, #f8fafb); /* Dieser Verlauf bleibt wie gewünscht */
+  background: linear-gradient(135deg, #fcfcfc, #eff1f2);
   font-family: 'Roboto', sans-serif;
   margin: 0;
   color: #f5f5f5;
@@ -10,15 +10,15 @@ body {
   background: rgba(0, 0, 0, 0.8);
   padding: 20px 0;
   text-align: center;
-  box-shadow: 0px 4px 20px rgba(255, 252, 252, 0.99);
-  border-bottom: 1px solid rgba(251, 247, 247, 0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .App-title {
   font-size: 2.5rem;
   margin: 0;
   font-weight: bold;
-  color: #f1e9e9; /* Titel bleibt weiß */
+  color: #ffffff;
 }
 
 .App-subtitle {
@@ -27,24 +27,20 @@ body {
   margin-top: 10px;
 }
 
-.App-nav {
-  margin-top: 20px;
-}
-
 .App-button {
-  background: #1e0bee; /* Hier ändern wir das Blau in Weiß */
+  background: #3366ff;
   border: none;
   border-radius: 20px;
-  color: #fafafa; /* Textfarbe in dunkles Grau ändern für bessere Lesbarkeit */
+  color: white;
   padding: 12px 30px;
   margin: 5px;
   cursor: pointer;
   transition: background 0.3s ease-in-out, transform 0.2s;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Behalte den Schatten */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .App-button:hover {
-  background: #e0e0e0; /* Ein etwas dunkleres Weiß für Hover-Effekte */
+  background: #254fbd;
   transform: translateY(-3px);
 }
 
@@ -52,46 +48,92 @@ body {
   margin: 40px auto;
   width: 80%;
   max-width: 600px;
-  background: rgba(255, 255, 255, 0.981);
+  background : rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0px 6px 30px rgba(7, 7, 78, 0.4);
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
-}
-
-.Chatbot-actions {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.Chatbot-action {
-  margin: 10px;
 }
 
 input[type="text"] {
   width: 75%;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(8, 8, 8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   margin-right: 5px;
   outline: none;
-  color: #111010;
+  color: #333;
+  
 }
 
 input[type="submit"] {
   padding: 10px 20px;
   border-radius: 5px;
-  background: #c46914; /* Ändern wir das Blau in Weiß */
-  color: #fbf3f3; /* Textfarbe in Dunkelgrau */
+  background: #ff5733;
+  color: white;
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background: #e0e0e0; /* Ein helleres Grau beim Hovern */
+  background: #c44527;
 }
 
 input[type="text"]::placeholder {
   color: #888;
+}
+
+.chatbot-animation {
+  display: block;
+  margin: 20px auto;
+  width: 150px; /* Passe die Bildgröße an */
+}
+.upload-button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.upload-button:hover {
+  background-color: #2980b9;
+}
+
+.upload-file-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* CSS für die Sternebewertung */
+.rating-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+}
+
+.star-rating button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ccc;
+}
+
+.star-rating .on {
+  color: gold;
+}
+
+.star-rating .off {
+  color: #ccc;
 }
