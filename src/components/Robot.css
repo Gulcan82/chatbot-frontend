@@ -1,3 +1,4 @@
+/* Robot-Container */
 .Robot {
   display: flex;
   flex-direction: column;
@@ -6,6 +7,7 @@
   padding: 20px;
 }
 
+/* Stil für das Video */
 .robot-video {
   width: 100%; /* Passt sich der Breite des Containers an */
   max-width: 300px; /* Reduziert die maximale Breite des Videos */
@@ -22,4 +24,56 @@ p {
   margin-top: 10px;
   font-size: 16px;
   color: #333;
+}
+
+/* Robot-Container */
+.robot {
+  width: 400px;
+  height: 200px;
+  background-color: rgb(13, 16, 6);
+  border-radius: 50px;
+  margin: 50px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+/* Animation der Augen */
+.robot-eyes {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(105, 105, 155), rgb(226, 226, 228));
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px 3px rgba(0, 0, 255, 0.8);
+  animation: eyeGlow 1.5s infinite alternate;
+}
+
+@keyframes eyeGlow {
+  0% { box-shadow: 0 0 10px 2px rgba(0, 0, 255, 0.5); }
+  100% { box-shadow: 0 0 15px 3px rgba(0, 0, 255, 1); }
+}
+
+/* Hover-Effekt für den gesamten Robot */
+.robot:hover {
+  transform: scale(1.05);
+}
+
+/* Stil für das Bild (robota-image) */
+.robot-image {
+  width: 120px;  /* Bildbreite auf 100px setzen */
+  height: auto;  /* Höhe automatisch skalieren */
+  border-radius: 10px;  /* Abgerundete Ecken */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  /* Schatteneffekt */
+  transition: transform 0.3s ease;  /* Sanfte Hover-Animation */
+}
+
+.robot-image:hover {
+  transform: scale(1.1);  /* Vergrößerung beim Hover */
 }
