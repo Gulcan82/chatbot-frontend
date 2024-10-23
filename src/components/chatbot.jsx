@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { chatService } from '../services/chatService.jsx';
-import './chatbot.css'; // Falls du CSS für den Chatbot verwendest
+import './chatbot.css'; // CSS für den Chatbot
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
