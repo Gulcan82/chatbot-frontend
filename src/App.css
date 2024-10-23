@@ -1,6 +1,6 @@
-/* App.css */
+/* Global Styles */
 body {
-  background: linear-gradient(135deg, #fcfcfc, #eff1f2);
+  background: linear-gradient(135deg, #25b0e1, #eff1f2);
   font-family: 'Roboto', sans-serif;
   margin: 0;
   color: #f5f5f5;
@@ -27,6 +27,7 @@ body {
   margin-top: 10px;
 }
 
+/* Button Styles */
 .App-button {
   background: #3366ff;
   border: none;
@@ -44,19 +45,15 @@ body {
   transform: translateY(-3px);
 }
 
+/* Chatbot Container */
 .Chatbot-container {
-  margin: 40px auto;
-  width: 80%;
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: blur(10px); /* Für Safari */
-  backdrop-filter: blur(10px); /* Für andere Browser */
 }
 
-
+/* Input Fields */
 input[type="text"] {
   width: 75%;
   padding: 10px;
@@ -65,7 +62,6 @@ input[type="text"] {
   margin-right: 5px;
   outline: none;
   color: #333;
-  
 }
 
 input[type="submit"] {
@@ -86,12 +82,14 @@ input[type="text"]::placeholder {
   color: #888;
 }
 
+/* Chatbot Animation */
 .chatbot-animation {
   display: block;
   margin: 20px auto;
-  width: 150px; /* Passe die Bildgröße an */
+  width: 150px;
 }
 
+/* Upload Button */
 .upload-button {
   background-color: #3498db;
   color: white;
@@ -108,13 +106,14 @@ input[type="text"]::placeholder {
   background-color: #2980b9;
 }
 
-
+/* File Upload Container */
 .upload-file-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-/* CSS für die Sternebewertung */
+
+/* Rating Container */
 .rating-container {
   text-align: center;
   margin-top: 20px;
@@ -140,4 +139,99 @@ input[type="text"]::placeholder {
 
 .star-rating .off {
   color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .Chatbot-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App-header {
+    padding: 15px 0;
+  }
+
+  .App-title {
+    font-size: 2rem;
+  }
+
+  .App-subtitle {
+    font-size: 1rem;
+  }
+
+  .App-button {
+    padding: 10px 25px;
+  }
+
+  .upload-button {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Chatbot-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .App-title {
+    font-size: 1.8rem;
+  }
+
+  .App-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .App-button {
+    padding: 8px 20px;
+    margin: 3px;
+    font-size: 0.9rem;
+  }
+
+  .chatbot-animation {
+    width: 120px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-title {
+    font-size: 1.5rem;
+  }
+
+  .App-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .App-button {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .chatbot-animation {
+    width: 100px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .star-rating button {
+    font-size: 1.5rem;
+  }
 }
