@@ -9,11 +9,11 @@
 
 /* Stil für das Video */
 .robot-video {
-  width: 100%; /* Passt sich der Breite des Containers an */
-  max-width: 300px; /* Reduziert die maximale Breite des Videos */
+  width: 80%; /* Passt sich der Breite des Containers an */
+  max-width: 200px; /* Reduziert die maximale Breite des Videos */
   height: auto; /* Höhe bleibt proportional zur Breite */
-  border-radius: 10px; /* Abgerundete Ecken */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+  border-radius: px; /* Abgerundete Ecken */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
 }
 
 .robot-eyes {
@@ -41,24 +41,7 @@ p {
   transition: transform 0.3s;
 }
 
-/* Animation der Augen */
-.robot-eyes {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgb(105, 105, 155), rgb(226, 226, 228));
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 15px 3px rgba(0, 0, 255, 0.8);
-  animation: eyeGlow 1.5s infinite alternate;
-}
 
-@keyframes eyeGlow {
-  0% { box-shadow: 0 0 10px 2px rgba(0, 0, 255, 0.5); }
-  100% { box-shadow: 0 0 15px 3px rgba(0, 0, 255, 1); }
-}
 
 /* Hover-Effekt für den gesamten Robot */
 .robot:hover {
