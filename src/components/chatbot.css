@@ -1,5 +1,6 @@
 /* Container für den gesamten Chatbot */
 .chatbot-container {
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -112,4 +113,107 @@
 
 .chat-messages::-webkit-scrollbar-thumb:hover {
   background-color: #555;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;  /* Breite des Chatbots */
+    height: 500px; /* Höhe des Chatbots */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.chatbot-container {
+ background-image: url('./robota-image.png');
+ margin: 20px auto;
+ width: 500px; /* Passe die Bildgröße an */
+ 
+}
+   
+    
+  
+  
+  /* Nachrichtenbereich */
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px; /* Platz für die Scrollleiste */
+  }
+  
+  /* Nachrichtenstile */
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 75%;
+    line-height: 1.5;
+  }
+  
+  .message.user {
+    background-color: #0084ff;
+    color: white;
+    align-self: flex-end; /* Benutzer-Nachrichten rechtsbündig */
+  }
+  
+  .message.bot {
+    background-color: #47ae25;
+    align-self: flex-start; /* Bot-Nachrichten linksbündig */
+  }
+  
+  /* Eingabeformular */
+  .chat-input-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  /* Eingabefeld */
+  .chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  /* Senden-Button */
+  .chat-submit {
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chat-submit:hover {
+    background-color: #005fcc;
+  }
+  
+  /* Scroll-Leiste für den Nachrichtenbereich */
+  .chat-messages::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .chat-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .chat-messages::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+  
+  .chat-messages::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+
 }
