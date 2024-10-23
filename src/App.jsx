@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // React Router verwenden
 import './App.css';
 import Chatbot from './components/chatbot.jsx';  // Chatbot-Komponente
 import Robot from './components/Robot.jsx';  // Robot-Komponente
+import About from './components/About.jsx';  // "Über uns"-Seite
+import Help from './components/Help.jsx';    // "Hilfe"-Seite
+import Settings from './components/Settings.jsx';  // "Einstellungen"-Seite
 
 
 // Neue Komponente für die Bewertung
@@ -34,34 +38,55 @@ const Rating = () => {
   );
 };
 
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">Intelligenter Smart Chatbot-Support</h1>
-        <p className="App-subtitle">Ihr zuverlässiger Assistent, jederzeit und überall</p>
-        <nav className="App-nav">
-          <button className="App-button">Hilfe</button>
-          <button className="App-button">Einstellungen</button>
-          <button className="App-button">Über uns</button>
-        </nav>
-      </header>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">Intelligenter Smart Chatbot-Support für die Cloud</h1>
+          <p className="App-subtitle">Ihr zuverlässiger Assistent, jederzeit und überall</p>
+          <nav className="App-nav">
+            <Link to="/help">
+              <button className="App-button">Hilfe</button>
+            </Link>
+            <Link to="/settings">
+              <button className="App-button">Einstellungen</button>
+            </Link>
+            <Link to="/about">
+              <button className="App-button">Über uns</button>
+            </Link>
+          </nav>
+        </header>
 
-      {/* Chatbot und Robot-Komponente zusammen in einem Container */}
-      <div className="Chatbot-container">
-        <Robot /> {/* Hier wird die Robot-Komponente angezeigt */}
-        <Chatbot /> {/* Hier wird der Chatbot angezeigt */}
+        {/* Routes für verschiedene Seiten */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <div className="Chatbot-container">
+                  <Robot /> {/* Hier wird die Robot-Komponente angezeigt */}
+                  <Chatbot /> {/* Hier wird der Chatbot angezeigt */}
+                </div>
+
+                <div className="Chatbot-actions">
+                  <button className="App-button Chatbot-action">Schnelle Antwort 1</button>
+                </div>
+
+                {/* Bewertungskomponente */}
+                <Rating /> {/* Die Sterne-Bewertung */}
+              </>
+            }
+          />
+          {/* Route für die "Über uns"-Seite */}
+          <Route path="/about" element={<About />} />
+          {/* Route für die "Hilfe"-Seite */}
+          <Route path="/help" element={<Help />} />
+          {/* Route für die "Einstellungen"-Seite */}
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
       </div>
-      
-
-      <div className="Chatbot-actions">
-        <button className="App-button Chatbot-action">Schnelle Antwort 1</button>
-      </div>
-
-      {/* Bewertungskomponente hinzufügen */}
-      <Rating /> {/* Die Sterne-Bewertung */}
-    </div>
+    </Router>
   );
 }
 
