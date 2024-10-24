@@ -42,8 +42,8 @@
 
 /* Stil für das Video */
 .robot-video {
-  width: 80%; /* Passt sich der Breite des Containers an */
-  max-width: 200px; /* Reduziert die maximale Breite des Videos */
+  width: 200%; /* Passt sich der Breite des Containers an */
+  max-width: 500px; /* Reduziert die maximale Breite des Videos */
   height: auto; /* Höhe bleibt proportional zur Breite */
 
   border-radius: 5px; /* Abgerundete Ecken korrigiert */

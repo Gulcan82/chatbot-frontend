@@ -43,9 +43,12 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Intelligenter Smart Chatbot-Support für die Cloud</h1>
+          <h1 className="App-title">Marie die Intelligente Smart Chatbot-Supporterin für die Cloud</h1>
           <p className="App-subtitle">Ihr zuverlässiger Assistent, jederzeit und überall</p>
           <nav className="App-nav">
+          <Link to="/">
+              <button className="App-button">Home</button>
+            </Link>
             <Link to="/help">
               <button className="App-button">Hilfe</button>
             </Link>
