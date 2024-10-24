@@ -46,56 +46,17 @@
   max-width: 500px; /* Reduziert die maximale Breite des Videos */
   height: auto; /* Höhe bleibt proportional zur Breite */
 
-  border-radius: 5px; /* Abgerundete Ecken korrigiert */
-
-  border-radius: px; /* Abgerundete Ecken */
+  border-radius: 10px; /* Abgerundete Ecken korrigiert */
 
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
 }
 
-.robot-eyes {
-  margin-top: 20px;
-}
 
 p {
-  margin-top: 10px;
-  font-size: 16px;
+  margin-top: 2px;
+  font-size: 20px;
   color: #333;
+  font-weight: bold; /* Macht den Text fett */
 }
 
-
-/* Robot-Container */
-.robot {
-  width: 400px;
-  height: 200px;
-  background-color: rgb(13, 16, 6);
-  border-radius: 50px;
-  margin: 50px auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
-}
-
-
-
-/* Hover-Effekt für den gesamten Robot */
-.robot:hover {
-  transform: scale(1.05);
-}
-
-/* Stil für das Bild (robota-image) */
-.robot-image {
-  width: 120px;  /* Bildbreite auf 100px setzen */
-  height: auto;  /* Höhe automatisch skalieren */
-  border-radius: 10px;  /* Abgerundete Ecken */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);  /* Schatteneffekt */
-  transition: transform 0.3s ease;  /* Sanfte Hover-Animation */
-}
-
-.robot-image:hover {
-  transform: scale(1.1);  /* Vergrößerung beim Hover */
-}
 
