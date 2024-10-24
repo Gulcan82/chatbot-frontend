@@ -1,0 +1,70 @@
+.about-page {
+    padding: 20px;
+    background: linear-gradient(135deg, #25b0e1, #eff1f2);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #333;
+  }
+  
+  .about-page h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1b6ca8;
+  }
+  
+  .about-page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #444;
+  }
+  
+  .about-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
+  .image-button {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: border 0.3s, box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .image-button:hover {
+    border: 2px solid #1b6ca8; /* Farbe des Rahmens beim Hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Schatteneffekt beim Hover */
+    transform: scale(1.05); /* Leichtes Vergrößern beim Hover */
+  }
+  
+  .image-button:active {
+    transform: scale(0.95); /* Verkleinern beim Klicken für Feedback */
+  }
+  
+  .image-container p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .person-description {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+  }
+  

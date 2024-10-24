@@ -1,9 +1,9 @@
 /* Robot-Container */
 .robot {
-  width: 400px;
+  width: 600px;
   height: 200px;
   background-color: rgba(13, 16, 6, 0.5); /* Semi-transparenter Hintergrund */
-  border-radius: 50px;
+  border-radius: 100px;
   margin: 50px auto;
   position: relative;
   display: flex;
@@ -42,15 +42,11 @@
 
 /* Stil für das Video */
 .robot-video {
-  width: 80%; /* Passt sich der Breite des Containers an */
-  max-width: 200px; /* Reduziert die maximale Breite des Videos */
-  height: auto; /* Höhe bleibt proportional zur Breite */
-
-  border-radius: 5px; /* Abgerundete Ecken korrigiert */
-
-  border-radius: px; /* Abgerundete Ecken */
-
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+  width: 200%; /* This will make the video take the full width of its container */
+  height: auto; /* This maintains the aspect ratio */
+  max-width: 500px; /* Set a maximum width for the video */
+  margin: 0 auto; /* Centers the video horizontally */
+  display: block;
 }
 
 .robot-eyes {
