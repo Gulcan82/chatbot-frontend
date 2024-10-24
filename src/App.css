@@ -282,6 +282,26 @@ input[type="text"]::placeholder {
   margin-bottom: 10px;
 }
 
+.help-page ul {
+  list-style-type: none;  /* Entfernt die Aufzählungspunkte */
+  padding: 0;
+}
+
+.help-page li {
+  margin-bottom: 15px;
+}
+
+.help-link {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.help-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
 
 
 

@@ -5,7 +5,8 @@ import './Robot.css'; // Ensure you have this file for the styles
 
 const Robot = () => {
   return (
-    <div className="Robot">
+    <div className="Robot"> 
+    <p>Willkommen zu unserem Abschluss Projekt</p>
 
     {/* Video player replacing the image */}
     <video 
@@ -14,7 +15,7 @@ const Robot = () => {
       controls
     className="robot-video" // Add a class for styling purposes
     />
-      <p>Willkommen zu unserem Abschluss Projekt</p>
+     
 
       
     </div>

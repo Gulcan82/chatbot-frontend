@@ -7,7 +7,7 @@ import Robot from './components/Robot.jsx';  // Robot-Komponente
 import About from './components/About.jsx';  // "Über uns"-Seite
 import Help from './components/Help.jsx';    // "Hilfe"-Seite
 import Settings from './components/Settings.jsx';  // "Einstellungen"-Seite
-
+import HowToUseChatbot from './components/HowToUseChatbot'; // Importiere die neue Seite
 
 // Neue Komponente für die Bewertung
 const Rating = () => {
@@ -44,8 +44,13 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+     Emanuelo
           <h1 className="App-title">Marie ihre Hilfe für die Cloud </h1>
           <p className="App-subtitle">die Intelligente Smart Chatbot-Supporterin für die Cloud</p>
+=
+          <h1 className="App-title">Marie die Intelligente Smart Chatbot-Supporterin für die Cloud</h1>
+          <p className="App-subtitle">Ihr zuverlässiger Assistent, jederzeit und überall</p>
+         master
           <nav className="App-nav">
           <Link to="/">
               <button className="App-button">Home</button>
@@ -89,6 +94,8 @@ function App() {
           <Route path="/help" element={<Help />} />
           {/* Route für die "Einstellungen"-Seite */}
           <Route path="/settings" element={<Settings />} />
+           {/* Route für "Wie man den Chatbot benutzt" */}
+          <Route path="/how-to-use-chatbot" element={<HowToUseChatbot />} /> {/* Neue Route */}
         </Routes>
       </div>
     </Router>
