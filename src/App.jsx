@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // React Router verwenden
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
 import './App.css';
 import Chatbot from './components/chatbot.jsx';  // Chatbot-Komponente
 import Robot from './components/Robot.jsx';  // Robot-Komponente
@@ -43,8 +44,13 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+     Emanuelo
+          <h1 className="App-title">Marie ihre Hilfe für die Cloud </h1>
+          <p className="App-subtitle">die Intelligente Smart Chatbot-Supporterin für die Cloud</p>
+=
           <h1 className="App-title">Marie die Intelligente Smart Chatbot-Supporterin für die Cloud</h1>
           <p className="App-subtitle">Ihr zuverlässiger Assistent, jederzeit und überall</p>
+         master
           <nav className="App-nav">
           <Link to="/">
               <button className="App-button">Home</button>
@@ -81,6 +87,7 @@ function App() {
               </>
             }
           />
+          
           {/* Route für die "Über uns"-Seite */}
           <Route path="/about" element={<About />} />
           {/* Route für die "Hilfe"-Seite */}

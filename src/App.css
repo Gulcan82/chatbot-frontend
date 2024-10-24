@@ -255,20 +255,6 @@ input[type="text"]::placeholder {
   margin: 0 auto;
 }
 
-.about-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.about-images img {
-  width: 150px;
-  height: 150px;
-  margin: 50px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.2);
-}
 .help-page, .settings-page {
   text-align: center;
   padding: 20px;
