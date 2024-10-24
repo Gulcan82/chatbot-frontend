@@ -41,6 +41,7 @@
     border: 2px solid transparent;
     transition: border 0.3s, box-shadow 0.3s, transform 0.3s;
     cursor: pointer;
+    box-sizing: border-box; /* Verhindert das "Flattern" */
   }
   
   .image-button:hover {

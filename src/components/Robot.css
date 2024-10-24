@@ -42,7 +42,6 @@
 
 /* Stil für das Video */
 .robot-video {
- Emanuelo
   width: 200%; /* This will make the video take the full width of its container */
   height: auto; /* This maintains the aspect ratio */
   max-width: 500px; /* Set a maximum width for the video */
